@@ -9,6 +9,8 @@ const response_type = 'token';
 const redirect_uri = 'http://localhost:3000/';
 
 const scope = [
+  "user-read-private",
+  "user-read-email",
   "user-read-currently-playing",
   "user-read-recently-played",
   "user-read-playback-state",

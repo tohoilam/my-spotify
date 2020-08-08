@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Login from './login';
-import { getTokenFromUrl } from './loginUrl';
+import { getTokenFromUrl } from './spotify_login_api';
+import SpotifyApi from './spotify_api';
 
 function App() {
   
   const [token, setToken] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
+  const spotify_api = new SpotifyApi();
+
+  const fetchUser = async () => {
+    const response = await spotify_api.fetchUser();
+    setUserInfo(response);
+    console.log(response);
+    return response;
+  };
 
   useEffect(() => {
     const response = getTokenFromUrl()
@@ -14,7 +24,16 @@ function App() {
     
     if (_token) {
       setToken(_token);
+
+      spotify_api.setAccessToken(_token);
+      // spotify_api.fetchUser().then((user) => {
+      //   console.log(user);
+      // })
+      fetchUser();
+
     }
+
+    // console.log(spotify_api.fetchUser());
     
   }, []);
   
