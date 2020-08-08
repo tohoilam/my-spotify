@@ -16,5 +16,16 @@ const scope = [
   "user-modify-playback-state",
 ];
 
-const loginUrl = `${endpoint}?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=${response_type}&scope=${scope.join("%20")}&show_dialog=true`;
-export default loginUrl;
+export const getTokenFromUrl = () => {
+  return window.location.hash
+    .substring(1)  //remove the hashtag in front (at string 0)
+    .split('&')   //turn into an array, split at &
+    .reduce((initial, current) => {
+      let param = current.split('=');
+      initial[param[0]] = decodeURIComponent(param[1]);
+
+      return initial;
+    }, {});
+};
+
+export const loginUrl = `${endpoint}?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=${response_type}&scope=${scope.join("%20")}&show_dialog=true`;
