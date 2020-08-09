@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Login from './login';
-import { getTokenFromUrl } from './spotify_login_api';
-import SpotifyApi from './spotify_api';
+import Login from '../login/login';
+import { getTokenFromUrl } from '../../api/spotify_login_api';
+import SpotifyApi from '../../api/spotify_api';
 
 function App() {
   
