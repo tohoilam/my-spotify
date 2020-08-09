@@ -11,7 +11,7 @@ function App() {
   const spotify_api = new SpotifyApi();
 
   const fetchUser = async () => {
-    const response = await spotify_api.fetchUser();
+    const response = await spotify_api.getUserInfo();
     setUserInfo(response);
     console.log(response);
     return response;
