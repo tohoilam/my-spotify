@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import SideBar from '../sideBar/sideBar';
+import YourSpotify from '../yourSpotify/yourSpotify';
+import Statistics from '../statistics/statistics';
+import './homeStyle.css';
 
 export default class Home extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
+      selectedScreen: "yourSpotify",
       userPlaylists: {},
       userInfo: {},
       currentlyPlaying: {},
@@ -53,14 +58,36 @@ export default class Home extends React.Component {
     this.fetchRecentlyPlayed();
   }
 
+  // sideBarItemListener(selected) {
+  //   // this.setState({selectedScreen: selected});
+  //   console.log(this.state.selectedScreen);
+  //   // if (selected) {
+  //   //   this.state.selectedScreen = selected;
+  //   // }
+    
+  //   // console.log(selected);
+  // }
+
+  mainBody() {
+    // console.log(this.state);
+    if (this.state.selectedScreen === "yourSpotify") {
+      return <YourSpotify />;
+    }
+    else if (this.state.selectedScreen === "statistics") {
+      return <Statistics />;
+    }
+  }
+
   render() {
-    return (
+    return ( 
       <div>
-        {this.state.playlist && this.state.playlist.tracks ? this.state.playlist.tracks.items.map(item => {
-          return <p>{item.track.name}</p>;
-        }) : ""}
-        {/* {console.log(JSON.stringify(this.state.playlist.tracks))} */}
-        
+        <SideBar setState={state => this.setState(state)}/>
+        <div className="mainBody">
+          {this.mainBody()}
+          {this.state.playlist && this.state.playlist.tracks ? this.state.playlist.tracks.items.map(item => {
+            return <p>{item.track.name}</p>;
+          }) : ""}
+        </div>
       </div>
     );
   }
