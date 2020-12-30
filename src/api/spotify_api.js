@@ -31,7 +31,7 @@ SpotifyApi.prototype = {
     return await this.request('GET', '/v1/me');
   },
 
-  getUserPlaylist: async function() {
+  getUserPlaylists: async function() {
     return await this.request('GET', '/v1/me/playlists');
   },
 
@@ -46,6 +46,10 @@ SpotifyApi.prototype = {
   getRecentlyPlayed: async function() {
     return await this.request('GET', '/v1/me/player/recently-played');
   },
+
+  getPlaylist: async function(playlistID) {
+    return await this.request('GET', '/v1/playlists/' + playlistID);
+  }
 };
 
 module.exports = SpotifyApi;
