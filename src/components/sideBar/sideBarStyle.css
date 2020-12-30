@@ -19,7 +19,3 @@
   font-weight: bold;
   cursor: pointer;
 }
-
-.sideBarItem:target {
-  background-color: green;
-}
