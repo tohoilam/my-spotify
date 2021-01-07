@@ -21,7 +21,7 @@ export default class App extends React.Component {
     const _token = response.access_token;
 
     if (_token) {
-      this.state.token = _token;
+      this.setState({token: _token});
       this.state.spotifyApi.setAccessToken(_token);
 
     }
@@ -31,7 +31,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         { // this part means if token exist, go to main page, if not, go to login page
-          this.state.token != "" ? (
+          this.state.token !== "" ? (
             <div>
               <Home spotifyApi={this.state.spotifyApi}/>
             </div>
