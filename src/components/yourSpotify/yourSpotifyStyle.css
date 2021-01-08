@@ -87,3 +87,11 @@
   background-color: rgb(29,185,84);
 }
 
+#mainSection {
+  overflow: scroll;
+  height: 100%;
+}
+
+#yourSpotify {
+  height: 100%;
+}

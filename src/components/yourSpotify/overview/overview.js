@@ -1,4 +1,5 @@
 import React from 'react';
+import ViewPlaylists from '../../common/viewPlaylists/viewPlaylists';
 
 export default class Statistics extends React.Component {
   constructor(props) {
@@ -13,8 +14,7 @@ export default class Statistics extends React.Component {
     console.log(this.state.userPlaylists);
     return (
       <div>
-        Overview
-        {this.state.userPlaylists.items ? this.state.userPlaylists.items.map((item) => <p>{item.name}</p>) : ""}
+        <ViewPlaylists playlists={this.state.userPlaylists}/>
       </div>
     )
   }

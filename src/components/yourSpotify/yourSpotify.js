@@ -14,7 +14,7 @@ export default class YourSpotify extends React.Component {
     }
   }
 
-  topSection() {
+  mainSection() {
     if (this.state.selectedSection === "overview") {
       return <Overview spotifyStates={this.props.spotifyStates}/>
     }
@@ -25,7 +25,7 @@ export default class YourSpotify extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="yourSpotify">
         <div id="topSection">
           <div id="topBar"></div>
           <div id="userSection">
@@ -57,8 +57,8 @@ export default class YourSpotify extends React.Component {
             </div>
           </div>
         </div>
-        <div id="topSection">
-          {this.topSection()}
+        <div id="mainSection">
+          {this.mainSection()}
         </div>
       </div>
     )
