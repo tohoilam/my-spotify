@@ -14,7 +14,7 @@ export default class Statistics extends React.Component {
     console.log(this.state.userPlaylists);
     return (
       <div>
-        <ViewPlaylists playlists={this.state.userPlaylists}/>
+        <ViewPlaylists playlists={this.state.userPlaylists} setState={(state) => this.props.setState(state)}/>
       </div>
     )
   }

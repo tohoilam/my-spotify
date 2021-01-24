@@ -16,7 +16,7 @@ export default class YourSpotify extends React.Component {
 
   mainSection() {
     if (this.state.selectedSection === "overview") {
-      return <Overview spotifyStates={this.props.spotifyStates}/>
+      return <Overview spotifyStates={this.props.spotifyStates} setState={state => this.props.setState(state)}/>
     }
     else if (this.state.selectedSection === "publicPlaylists") {
       return <PublicPlaylists spotifyStates={this.props.spotifyStates}/>

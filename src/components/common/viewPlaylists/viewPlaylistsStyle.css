@@ -1,17 +1,25 @@
-.playlistsFlexBox {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+@media(min-width:200px) {
+  .playlistsFlexBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+  }
 }
 
 .playlist {
   border: 1px solid red;
-  float: left;
+  /* float: left; */
+  flex-basis: 30%;
+  /* box-sizing: border-box; */
+  height: auto;
+
 }
 
 .playlistImage {
-  max-height: 200px;
-  max-width: 200px;
+  /* max-height: 200px;
+  max-width: 200px; */
   /* height: 200px;
   width: 200px; */
   background-position: center center;

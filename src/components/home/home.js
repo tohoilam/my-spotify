@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SideBar from '../sideBar/sideBar';
 import YourSpotify from '../yourSpotify/yourSpotify';
 import Statistics from '../statistics/statistics';
+import ViewTracks from '../common/viewTracks/viewTracks';
 import './homeStyle.css';
 
 export default class Home extends React.Component {
@@ -9,6 +10,7 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       selectedScreen: "yourSpotify",
+      selectedPlaylistID: "",
       userPlaylists: {},
       userInfo: {},
       currentlyPlaying: {},
@@ -23,7 +25,7 @@ export default class Home extends React.Component {
     const response = await this.props.spotifyApi.getUserPlaylists();
     this.setState({userPlaylists: response});
 
-    await this.fetchPlaylist(this.state.userPlaylists.items[0].id);
+    // await this.fetchPlaylist(this.state.userPlaylists.items[0].id);
     return true;
   }
 
@@ -52,10 +54,10 @@ export default class Home extends React.Component {
     return true;
   }
 
-  async fetchPlaylist(playlistID) {
-    const response = await this.props.spotifyApi.getPlaylist(playlistID);
-    this.setState({playlist: response});
-  }
+  // async fetchPlaylist(playlistID) {
+  //   const response = await this.props.spotifyApi.getPlaylist(playlistID);
+  //   this.setState({playlist: response});
+  // }
 
   async loadInfo() {
     await this.fetchUserInfo();
@@ -71,15 +73,17 @@ export default class Home extends React.Component {
     if (!this.state.isLoaded) {
       this.loadInfo();
     }
-    
   }
 
   mainBody() {
     if (this.state.selectedScreen === "yourSpotify") {
-      return <YourSpotify spotifyStates={this.state}/>;
+      return <YourSpotify spotifyStates={this.state} setState={state => this.setState(state)}/>;
     }
     else if (this.state.selectedScreen === "statistics") {
       return <Statistics spotifyStates={this.state}/>;
+    }
+    else if (this.state.selectedScreen === "viewTracks") {
+      return <ViewTracks spotifyStates={this.props.spotifyStates} playlistID={this.state.selectedPlaylistID} spotifyApi={this.props.spotifyApi}/>;
     }
   }
 
@@ -95,11 +99,13 @@ export default class Home extends React.Component {
       <div>
 
         <SideBar setState={state => this.setState(state)} spotifyStates={this.state}/>
-        <div className="mainBody">
-          {this.mainBody()}
-          {/* {this.state.playlist && this.state.playlist.tracks ? this.state.playlist.tracks.items.map(item => {
-            return <p>{item.track.name}</p>;
-          }) : ""} */}
+        <div id="mainContent">
+          <div className="mainBody">
+            {this.mainBody()}
+            {/* {this.state.playlist && this.state.playlist.tracks ? this.state.playlist.tracks.items.map(item => {
+              return <p>{item.track.name}</p>;
+            }) : ""} */}
+          </div>
         </div>
       </div>
     );

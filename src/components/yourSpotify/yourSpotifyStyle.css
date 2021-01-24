@@ -88,8 +88,8 @@
 }
 
 #mainSection {
-  overflow: scroll;
-  height: 100%;
+  overflow: auto;
+  height: 70vh;
 }
 
 #yourSpotify {
