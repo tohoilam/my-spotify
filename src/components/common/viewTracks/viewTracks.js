@@ -32,10 +32,10 @@ export default class Statistics extends React.Component {
 
     return (
       <div>
-        <div id="topBar">
+        <div id="topBar" className="lightGreyBackground">
 
         </div>
-        <div id="playlistHeaderSection">
+        <div id="playlistHeaderSection" className="colorGradientBackground">
           <div id="playlistImage">
             <img src={this.state.playlist.images[0].url} alt="Playlist Cover Image"></img>
           </div>
@@ -59,7 +59,7 @@ export default class Statistics extends React.Component {
             const duration_string = duration_m + ":" + duration_s;
 
             return (
-              <div className="track">
+              <div className="track trackHover">
                 <div className="trackName trackItems textOverflow">{item.track.name}</div>
                 <div className="trackArtist trackItems textOverflow">{item.track.artists.map(artist => artist.name)}</div>
                 <div className="trackAlbum trackItems textOverflow">{item.track.album.name}</div>

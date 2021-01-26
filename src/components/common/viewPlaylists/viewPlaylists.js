@@ -30,7 +30,7 @@ export default class Statistics extends React.Component {
                   <img src={playlist.images[0].url} alt="Playlist Image"></img>
                 </div>
                 <div className="playlistInfo">
-                  <h3>{playlist.name}</h3>
+                  <h3 className="hoverCursor" onClick={() => this.selectPlaylist(playlist.id)}>{playlist.name}</h3>
                   <h4>50 tracks</h4> {/* TODO: obtain tracks from backend */}
                 </div>
               </div>

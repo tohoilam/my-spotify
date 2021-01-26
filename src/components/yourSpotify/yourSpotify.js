@@ -26,7 +26,7 @@ export default class YourSpotify extends React.Component {
   render() {
     return (
       <div id="yourSpotify">
-        <div id="topSection">
+        <div id="topSection" className="colorGradientBackground">
           <div id="topBar"></div>
           <div id="userSection">
             <div id="userSectionImage">

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SideBar from '../sideBar/sideBar';
+import PlayBar from '../playBar/playBar';
 import YourSpotify from '../yourSpotify/yourSpotify';
 import Statistics from '../statistics/statistics';
 import ViewTracks from '../common/viewTracks/viewTracks';
@@ -97,16 +98,19 @@ export default class Home extends React.Component {
 
     return ( 
       <div>
-
-        <SideBar setState={state => this.setState(state)} spotifyStates={this.state}/>
-        <div id="mainContent">
-          <div className="mainBody">
-            {this.mainBody()}
-            {/* {this.state.playlist && this.state.playlist.tracks ? this.state.playlist.tracks.items.map(item => {
-              return <p>{item.track.name}</p>;
-            }) : ""} */}
+        <div id="mainPage">
+          <SideBar setState={state => this.setState(state)} spotifyStates={this.state}/>
+          <div id="mainContent">
+            <div className="mainBody">
+              {this.mainBody()}
+              {/* {this.state.playlist && this.state.playlist.tracks ? this.state.playlist.tracks.items.map(item => {
+                return <p>{item.track.name}</p>;
+              }) : ""} */}
+            </div>
           </div>
         </div>
+        
+        <PlayBar />
       </div>
     );
   }

@@ -16,8 +16,10 @@
 }
 
 #playlistHeaderSection > #playlistImage > img {
-  height: 100%;
-  width: auto;
+  height: 200px;
+  width: 200px;
+  background-position: center center;
+  object-fit: cover;
 }
 
 #playlistHeaderSection > #playlistInfo {
@@ -51,33 +53,37 @@
   width: 100%;
   height: 17px;
   font-size: 10pt;
-  border-top: 1px solid grey;
+  border-top: 1px solid rgba(46, 46, 46);
   padding-top: 7px;
   padding-bottom: 7px;
 }
 
+.trackHover:hover {
+  background-color: rgb(46, 46, 46);
+}
+
 .trackName {
-  width: 300px;
+  width: 30%;
   margin-right: 10px;
 }
 
 .trackArtist {
-  width: 150px;
+  width: 20%;
   margin-right: 10px;
 }
 
 .trackAlbum {
-  width: 100px;
+  width: 10%;
   margin-right: 10px;
 }
 
 .trackAddedDate {
-  width: 100px;
+  width: 10%;
   margin-right: 10px;
 }
 
 .trackDuration {
-  width: 100px;
+  width: 10%;
 }
 
 .trackItems {
