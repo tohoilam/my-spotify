@@ -30,7 +30,7 @@ export default class YourSpotify extends React.Component {
           <div id="topBar"></div>
           <div id="userSection">
             <div id="userSectionImage">
-              <img src={this.state.userInfo.images[0].url} alt="User Profile Image"></img>
+              <img src={this.state.userInfo.images.length == 0 ? '../../img/blankUserImage.png' : this.state.userInfo.images[0].url} alt="User Profile Image"></img>
             </div>
             <div id="userName">
               <h4>{this.state.userInfo.type}</h4>

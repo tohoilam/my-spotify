@@ -97,7 +97,7 @@ export default class Home extends React.Component {
     }
 
     return ( 
-      <div>
+      <div id="webPage">
         <div id="mainPage">
           <SideBar setState={state => this.setState(state)} spotifyStates={this.state}/>
           <div id="mainContent">

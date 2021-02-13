@@ -1,7 +1,9 @@
 .sideBar {
-  height:  100%;
+  float: left;
+  /* height:  auto; */
+  /* min-height: 100%; */
   width: 160px;
-  position: fixed;
+  /* position: fixed; */
   display: block;
   background-color: black;
 }

@@ -20,7 +20,7 @@ export default class SideBar extends React.Component {
       <div className="sideBar">
         <div id="sideBarUserInfo">
           <div id="userImage">
-            <img src={this.state.userInfo.images[0].url} alt="User Profile Image"></img>
+            <img src={this.state.userInfo.images.length == 0 ? '../../img/blankUserImage.png' : this.state.userInfo.images[0].url} alt="User Profile Image"></img>
           </div>
           <h4>{this.state.userInfo.type}</h4>
           <h2>{this.state.userInfo.display_name}</h2>

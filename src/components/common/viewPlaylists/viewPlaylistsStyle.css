@@ -39,9 +39,15 @@
   background-size: cover;
 }
 
+.playlistImage:hover {
+  z-index: 10;
+  opacity: 40%;
+}
+
 .playlistImage > img {
   display: block;
   object-fit: cover;
+  /* opacity: 0.5; */
   /* flex-basis: 30%; */
   height: 200px;
   width: 200px;
