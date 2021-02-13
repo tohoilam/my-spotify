@@ -1,0 +1,96 @@
+#topSection {
+  height: 230px;
+  width: 100%;
+}
+
+#topBar {
+  height: 40px;
+  width: 100%;
+}
+
+#userSection {
+  position: relative;
+  height: 160px;
+  width: 100%;
+}
+
+#userSectionImage {
+  float: left;
+  height: 130px;
+  width: 130px;
+  padding-top: 15px;
+  margin-left: 40px;
+}
+
+#userSectionImage > img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+#userSection > #userName {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#userSection > #userName > h1 {
+  font-size: 30pt;
+  margin-top: 25px;
+}
+
+#userSection > #userName > h4 {
+  float: left;
+  font-weight: normal;
+}
+
+#userSection > #userName > #more {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: black;
+}
+
+#topSection > #selection {
+  height: 30px;
+  width: 100%;
+  position: relative;
+}
+
+#topSection > #selection > .userSelectionItem {
+  position: relative;
+  display: inline;
+  color: rgb(190, 190, 190);
+  font-size: 11pt;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#topSection > #selection > .userSelectionItem:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#topSection > #selection > .userSelectionItem > .lightUpBox {
+  position:absolute;
+  left: 0px;
+  top: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 2px;
+  width: 100%;
+  display: unset;
+  background-color: rgb(29,185,84);
+}
+
+#mainSection {
+  overflow: auto;
+  height: 70vh;
+}
+
+#yourSpotify {
+  height: 100%;
+}
