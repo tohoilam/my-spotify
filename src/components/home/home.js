@@ -39,23 +39,29 @@ export default class Home extends React.Component {
     return true;
   }
 
-  async fetchCurrentlyPlaying() {
-    const response = await this.props.spotifyApi.getCurrentlyPlaying();
-    if (response) {
-      this.setState({currentlyPlaying: response});
-    }
+  // async fetchCurrentlyPlaying() {
+  //   const response = await this.props.spotifyApi.getCurrentlyPlaying();
+  //   if (response) {
+  //     this.setState({currentlyPlaying: response});
+  //   }
+  //   else {
+  //     this.setState({currentlyPlaying: {}});
+  //   }
     
-    return true;
-  }
+  //   return true;
+  // }
 
-  async fetchCurrentPlayer() {
-    const response = await this.props.spotifyApi.getCurrentPlayer();
-    if (response) {
-      this.setState({currentPlayer: response});
-    }
+  // async fetchCurrentPlayer() {
+  //   const response = await this.props.spotifyApi.getCurrentPlayer();
+  //   if (response) {
+  //     this.setState({currentPlayer: response});
+  //   }
+  //   else {
+  //     this.setState({currentPlayer: {}});
+  //   }
     
-    return true;
-  }
+  //   return true;
+  // }
 
   async fetchRecentlyPlayed() {
     const response = await this.props.spotifyApi.getRecentlyPlayed();
@@ -74,8 +80,8 @@ export default class Home extends React.Component {
   async loadInfo() {
     await this.fetchUserInfo();
     await this.fetchUserPlaylists();
-    await this.fetchCurrentlyPlaying();
-    await this.fetchCurrentPlayer();
+    // await this.fetchCurrentlyPlaying();
+    // await this.fetchCurrentPlayer();
     await this.fetchRecentlyPlayed();
     this.setState({isLoaded: true});
     console.log("Loaded");
