@@ -9,3 +9,19 @@
 .lightGreyBackground {
   background-color: rgb(46, 46, 46);
 }
+
+.lightGreyFont {
+  color: rgb(190, 190, 190);
+}
+
+.spotifyGreenFont {
+  color: rgb(29, 137, 84);
+}
+
+.spotifyGreenBackgroundColor {
+  background-color: rgb(29, 137, 84);
+}
+
+.app {
+  height: 100vh;
+}

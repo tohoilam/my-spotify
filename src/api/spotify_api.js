@@ -36,11 +36,19 @@ SpotifyApi.prototype = {
   },
 
   getCurrentlyPlaying: async function() {
-    return await this.request('GET', '/v1/me/player/currently-playing');
+    const response = await this.request('GET', '/v1/me/player/currently-playing');
+    if (response) {
+      return response;
+    }
+    return {};
   },
 
   getCurrentPlayer: async function() {
-    return await this.request('GET', '/v1/me/player');
+    const response = await this.request('GET', '/v1/me/player');
+    if (response) {
+      return response;
+    }
+    return {};
   },
 
   getRecentlyPlayed: async function() {

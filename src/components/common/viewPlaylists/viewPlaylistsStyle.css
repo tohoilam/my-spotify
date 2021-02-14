@@ -5,6 +5,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 50px;
+    margin-top: 0px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(199, 198, 198, 0.15);
   }
 }
 
@@ -40,7 +43,7 @@
 }
 
 .playlistImage:hover {
-  z-index: 10;
+  /* z-index: 10; */
   opacity: 40%;
 }
 
@@ -52,4 +55,10 @@
   height: 200px;
   width: 200px;
   background-position: center center;
+}
+
+.viewPlaylists > h2 {
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 23px;
 }

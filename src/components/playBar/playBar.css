@@ -1,8 +1,41 @@
 #playBar {
   /* position: fixed; */
   /* bottom: 0%; */
-  float: left;
-  height: 50px;
+  /* float: left; */
+  height: 90px;
   width: 100%;
   background-color: rgb(46, 46, 46);
+
+}
+
+#currentlyPlayingImage {
+  position: relative;
+}
+
+#currentlyPlayingImage {
+  float: left;
+  height: 70px;
+  width: 70px;
+  padding: 10px;
+  object-fit: cover;
+  background-position: center center;
+}
+#currentlyPlayingImage > img {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+#currentlyPlaying > h3{
+  /* float: left; */
+  /* font: 9px; */
+  font-size: 16px;
+  padding-top: 25px;
+  color: white;
+}
+
+#currentlyPlaying > h4 {
+  font-size: 14px;
+  padding-top: 5px;
+  /* color: white; */
 }
