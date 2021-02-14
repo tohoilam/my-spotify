@@ -24,7 +24,9 @@ export default class Home extends React.Component {
 
   async fetchUserPlaylists() {
     const response = await this.props.spotifyApi.getUserPlaylists();
-    this.setState({userPlaylists: response});
+    if (response) {
+      this.setState({userPlaylists: response});
+    }
 
     // await this.fetchPlaylist(this.state.userPlaylists.items[0].id);
     return true;
@@ -39,19 +41,28 @@ export default class Home extends React.Component {
 
   async fetchCurrentlyPlaying() {
     const response = await this.props.spotifyApi.getCurrentlyPlaying();
-    this.setState({currentlyPlaying: response});
+    if (response) {
+      this.setState({currentlyPlaying: response});
+    }
+    
     return true;
   }
 
   async fetchCurrentPlayer() {
     const response = await this.props.spotifyApi.getCurrentPlayer();
-    this.setState({currentPlayer: response});
+    if (response) {
+      this.setState({currentPlayer: response});
+    }
+    
     return true;
   }
 
   async fetchRecentlyPlayed() {
     const response = await this.props.spotifyApi.getRecentlyPlayed();
-    this.setState({recentlyPlayed: response});
+    if (response) {
+      this.setState({recentlyPlayed: response});
+    }
+    
     return true;
   }
 
@@ -110,7 +121,7 @@ export default class Home extends React.Component {
           </div>
         </div>
         
-        <PlayBar />
+        <PlayBar spotifyApi={this.props.spotifyApi}/>
       </div>
     );
   }
