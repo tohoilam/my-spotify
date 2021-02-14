@@ -20,7 +20,11 @@
 #mainPage {
   display: flex;
   position: relative;
-  height: 88%;
+  /* height: 88%; */
+  height: -moz-calc(100% - 90px);
+  height: -webkit-calc(100% - 90px);
+  height: -o-calc(100% - 90px);
+  height: calc(100% - 90px);
   /* overflow: scroll; */
   /* height: auto; */
   /* min-height: 100%; */
