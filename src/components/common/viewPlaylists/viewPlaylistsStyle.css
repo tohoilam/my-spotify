@@ -40,7 +40,7 @@
 }
 
 .playlistImage:hover {
-  z-index: 10;
+  /* z-index: 10; */
   opacity: 40%;
 }
 
