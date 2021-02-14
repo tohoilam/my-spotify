@@ -22,6 +22,7 @@ export default class Statistics extends React.Component {
     return (
       <div className="viewPlaylists">
         <h2>Your Playlists</h2>
+        {/* <hr></hr> */}
         <div className="playlistsFlexBox">
           {this.state.playlists.items ? this.state.playlists.items.map((playlist) => {
             return (
