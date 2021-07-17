@@ -2,6 +2,7 @@ import React from 'react';
 import './yourSpotifyStyle.css';
 import Overview from './overview/overview';
 import PublicPlaylists from './publicPlaylists/publicPlaylists';
+import '../app/App.css'
 
 export default class YourSpotify extends React.Component {
 
@@ -34,7 +35,7 @@ export default class YourSpotify extends React.Component {
             </div>
             <div id="userName">
               <h4>{this.state.userInfo.type}</h4>
-              <h1>{this.state.userInfo.display_name}</h1>
+              <h1 className="fontFamilyBold">{this.state.userInfo.display_name}</h1>
               <div id="more"></div>
             </div>
           </div>

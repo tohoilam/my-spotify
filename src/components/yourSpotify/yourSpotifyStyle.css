@@ -45,7 +45,7 @@
 }
 
 #userSection > #userName > #more {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 10px;
   height: 30px;
   width: 30px;
@@ -64,7 +64,7 @@
   position: relative;
   display: inline;
   color: rgb(190, 190, 190);
-  font-size: 11pt;
+  font-size: 12pt;
   margin-right: 20px;
   margin-left: 20px;
 }
