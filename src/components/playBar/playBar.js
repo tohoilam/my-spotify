@@ -106,8 +106,8 @@ export default class PlayBar extends React.Component {
         <div id="playControl">
           <table id="playControlTable">
             <tr>
-              <td id="shuffleButton" class="material-icons md-18 md-light playControlIcon hoverCursor">shuffle</td>
-              <td id="nextButton" class="material-icons md-18 md-light playControlIcon hoverCursor">skip_previous</td>
+              <td id="shuffleButton" class="material-icons md-18 md-light playControlIcon hoverCursor nonPlayControl">shuffle</td>
+              <td id="nextButton" class="material-icons md-18 md-light playControlIcon hoverCursor nonPlayControl">skip_previous</td>
               {
                 this.state.isPlaying ? (
                   <td id="playButton" class="material-icons md-36 md-light playControlIcon hoverCursor">pause_circle</td>
@@ -115,8 +115,8 @@ export default class PlayBar extends React.Component {
                   <td id="playButton" class="material-icons md-36 md-light playControlIcon hoverCursor">play_circle</td>
                 )
               }
-              <td id="backButton" class="material-icons md-18 md-light playControlIcon hoverCursor">skip_next</td>
-              <td id="loopButton" class="material-icons md-18 md-light playControlIcon hoverCursor">loop</td>
+              <td id="backButton" class="material-icons md-18 md-light playControlIcon hoverCursor nonPlayControl">skip_next</td>
+              <td id="loopButton" class="material-icons md-18 md-light playControlIcon hoverCursor nonPlayControl">loop</td>
             </tr>
           </table>
           <div id="progressBarBox">
