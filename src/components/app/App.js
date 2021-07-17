@@ -29,7 +29,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="app fontFamily">
         { // this part means if token exist, go to main page, if not, go to login page
           this.state.token !== "" ? (
             <div>
@@ -39,6 +39,7 @@ export default class App extends React.Component {
             <Login />
           )
         }
+        
       </div>
     );
   }

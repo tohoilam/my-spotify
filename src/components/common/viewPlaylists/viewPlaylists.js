@@ -30,9 +30,9 @@ export default class Statistics extends React.Component {
                 <div className="playlistImage hoverCursor" onClick={() => this.selectPlaylist(playlist.id)}>
                   <img src={playlist.images[0].url} alt="Playlist Image"></img>
                 </div>
-                <div className="playlistInfo">
-                  <h3 className="hoverCursor" onClick={() => this.selectPlaylist(playlist.id)}>{playlist.name}</h3>
-                  <h4>50 tracks</h4> {/* TODO: obtain tracks from backend */}
+                <div className="playlistInfo fontFamily">
+                  <h3 className="hoverCursor fontFamily" onClick={() => this.selectPlaylist(playlist.id)}>{playlist.name}</h3>
+                  <h4 className="fontFamilyLight">50 tracks</h4> {/* TODO: obtain tracks from backend */}
                 </div>
               </div>
             )

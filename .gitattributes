@@ -1,0 +1,2 @@
+music_data/*.csv filter=lfs diff=lfs merge=lfs -text
+music_data/*.json filter=lfs diff=lfs merge=lfs -text

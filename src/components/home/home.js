@@ -109,7 +109,7 @@ export default class Home extends React.Component {
     console.log("render");
     if (!this.state.isLoaded) {
       return (
-        <div id="loading">Loading...</div>
+        <div id="loading fontFamily">Loading...</div>
       )
     }
 

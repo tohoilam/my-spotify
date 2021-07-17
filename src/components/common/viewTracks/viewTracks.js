@@ -1,5 +1,6 @@
 import React from 'react';
 import './viewTracksStyle.css';
+import '../../app/App.css';
 
 export default class Statistics extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ export default class Statistics extends React.Component {
   render() {
     if (!this.state.isLoaded) {
       return (
-        <div>Loading...</div>
+        <div className="fontFamily">Loading...</div>
       )
     }
 
@@ -39,9 +40,9 @@ export default class Statistics extends React.Component {
           <div id="playlistImage">
             <img src={this.state.playlist.images[0].url} alt="Playlist Cover Image"></img>
           </div>
-          <div id="playlistInfo">
+          <div id="playlistInfo" className="fontFamily">
             <h4>{this.state.playlist.type}</h4>
-            <h2>{this.state.playlist.name}</h2>
+            <h2 className="fontFamilyBold">{this.state.playlist.name}</h2>
             <h4>By ...</h4>
             <h4>{this.state.playlist.tracks.total} songs</h4>
           </div>
@@ -59,7 +60,7 @@ export default class Statistics extends React.Component {
             const duration_string = duration_m + ":" + duration_s;
 
             return (
-              <div className="track trackHover">
+              <div className="track trackHover fontFamily">
                 <div className="trackName trackItems textOverflow">{item.track.name}</div>
                 <div className="trackArtist trackItems textOverflow">{item.track.artists.map(artist => artist.name)}</div>
                 <div className="trackAlbum trackItems textOverflow">{item.track.album.name}</div>
