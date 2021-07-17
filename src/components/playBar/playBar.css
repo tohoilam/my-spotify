@@ -8,6 +8,11 @@
 
 }
 
+#currentlyPlaying {
+  float: left;
+  width: 25%;
+}
+
 #currentlyPlayingImage {
   position: relative;
 }
@@ -29,13 +34,118 @@
 #currentlyPlaying > h3{
   /* float: left; */
   /* font: 9px; */
-  font-size: 16px;
+  font-size: 14px;
   padding-top: 25px;
   color: white;
 }
 
 #currentlyPlaying > h4 {
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 5px;
   /* color: white; */
 }
+
+#playControl {
+  float: left;
+  width: 50%;
+  margin-top: 10px;
+}
+
+#playControlTable {
+  width: 60%;
+  margin: auto;
+}
+
+.playControlIcon {
+  width: 18%;
+  text-align: center;
+}
+
+#playButton {
+  width: 22%;
+}
+
+#progressBarBox {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.sliderContainer {
+  width: 80%;
+  float: left;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  /* margin: auto; */
+  /* display: block; */
+  width: 100%;
+  height: 5px;
+  border-radius: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 5px;
+  border-radius: 25px;
+  opacity: 1;
+  background: rgb(29, 137, 84);
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 100px; /* Set a specific slider handle width */
+  height: 5px; /* Slider handle height */
+  background: rgb(29, 137, 84); /* Green background */
+}
+
+.songSecond {
+  float: left;
+  font-size: 12px;
+  width: 10%;
+  display: block;
+  text-align: center;
+  margin-top: 4px;
+}
+
+#playSetting {
+  
+  float: left;
+  width: 23%;
+  margin-right: 2%;
+  margin-top: 40px;
+}
+
+.whiteSpace {
+  /* float: left;
+  width: 20%; */
+}
+
+.settingButton {
+  float: right;
+  width: 10%;
+  margin-left: 10px;
+}
+
+#volumeSlider {
+  float: right;
+  width: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 6px;
+}
+
+
+
